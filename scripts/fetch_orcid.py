@@ -66,12 +66,19 @@ TARGET_PAGES = [
 ]
 
 # ORCID work types -> the section they belong in.
+#
+# book / book-chapter sit with the conference papers on purpose: in this record
+# they are all proceedings volumes (Springer LNCE, GeoChina) that ORCID and
+# Crossref happen to type as books. Entries in extra_publications.json can use
+# the pseudo-types "domestic-journal" and "thesis", which ORCID has no notion of.
 SECTIONS = [
-    ("journal", u"期刊論文", {"journal-article", "review", "translation"}),
+    ("journal", u"國際期刊論文", {"journal-article", "review", "translation"}),
+    ("domestic", u"國內期刊論文", {"domestic-journal"}),
     ("conference", u"研討會論文",
-     {"conference-paper", "conference-abstract", "conference-poster"}),
-    ("other", u"專書與其他",
-     {"book", "book-chapter", "report", "dissertation-thesis", "supervised-student-publication"}),
+     {"conference-paper", "conference-abstract", "conference-poster",
+      "book", "book-chapter"}),
+    ("thesis", u"學位論文", {"thesis", "dissertation-thesis"}),
+    ("other", u"其他", {"report", "supervised-student-publication"}),
 ]
 DEFAULT_SECTION = "other"
 
@@ -280,6 +287,14 @@ def escape(text):
                 .replace('"', "&quot;"))
 
 
+def has_cjk(text):
+    """True if the string carries Han characters."""
+    for ch in text:
+        if u"㐀" <= ch <= u"鿿" or u"豈" <= ch <= u"﫿":
+            return True
+    return False
+
+
 def section_key(work_type):
     for key, _label, types in SECTIONS:
         if work_type in types:
@@ -300,6 +315,10 @@ def format_authors(names):
         parts.append(marked)
     if len(parts) == 1:
         return parts[0]
+    if any(has_cjk(name) for name in names):
+        # Chinese-language works list their authors with the ideographic
+        # comma and no conjunction.
+        return u"、".join(parts)
     return ", ".join(parts[:-1]) + " and " + parts[-1]
 
 
@@ -317,22 +336,40 @@ def format_locator(record):
 
 
 def format_citation(record):
+    title = record["title"]
+    container = record["container"]
+    locator = format_locator(record)
+
+    # Chinese-language works take full-width punctuation and no spacing.
+    chinese = has_cjk(title) or any(has_cjk(a) for a in record["authors"])
+    # Synthesised italics on Han characters look broken, so only Latin
+    # container names are emphasised.
+    venue = escape(container) if has_cjk(container) else "<em>%s</em>" % escape(container)
+
     pieces = []
     authors = format_authors(record["authors"])
-    if authors:
-        # Credit names are often already abbreviated ("Weng, M.C."), and the
-        # rendered string may end in </u>, so test the raw name instead.
-        trailing = "" if record["authors"][-1].rstrip().endswith(".") else "."
-        pieces.append(authors + trailing)
-    pieces.append(escape(record["title"]).rstrip(".") + ".")
-    if record["container"]:
-        pieces.append("<em>%s</em>" % escape(record["container"]) +
-                      ("," if format_locator(record) else "."))
-    locator = format_locator(record)
-    if locator:
-        pieces.append(locator + ".")
 
-    citation = " ".join(pieces)
+    if chinese:
+        if authors:
+            pieces.append(authors)
+        pieces.append(escape(title).rstrip(u"。."))
+        if container:
+            pieces.append(venue)
+        if locator:
+            pieces.append(locator)
+        citation = u"，".join(pieces) + u"。"
+    else:
+        if authors:
+            # Credit names are often already abbreviated ("Weng, M.C."), and the
+            # rendered string may end in </u>, so test the raw name instead.
+            trailing = "" if record["authors"][-1].rstrip().endswith(".") else "."
+            pieces.append(authors + trailing)
+        pieces.append(escape(title).rstrip(".") + ".")
+        if container:
+            pieces.append(venue + ("," if locator else "."))
+        if locator:
+            pieces.append(locator + ".")
+        citation = " ".join(pieces)
 
     if record.get("doi"):
         doi = escape(record["doi"])

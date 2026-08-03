@@ -1,50 +1,552 @@
 [
   {
-    "_comment": "Works that are not in ORCID. Seeded from jatestrella.github.io/WebSite. Add new entries here only when a paper has no ORCID record; anything with a DOI is better added to ORCID itself, where it will be picked up automatically.",
-    "title": "The Construction of the particulate interface model and the application on rock mechanics",
-    "authors": ["C.C. Chiu", "M.C. Weng"],
-    "container": "2018 Taiwan Rock Engineering Symposium, NCKU, Tainan",
+    "_README": "Works that ORCID does not carry. Seeded from 履歷表 (updated 2026/02/04). ORCID holds 20 of the 62 works on the CV, so most local conference papers and all Chinese-language items live here. Anything with a DOI is better registered in ORCID itself, where the weekly job will pick it up automatically and it can then be deleted from this file. Recognised types: journal-article, domestic-journal, conference-paper, thesis.",
+    "title": "Assessing the impact of rockfall on a bridge by using hybrid DEM/FEM analysis: A case study in Central Taiwan",
+    "authors": [
+      "T.Y.P. Yuen",
+      "M.C. Weng",
+      "Y.Y. Fu",
+      "G.T. Lu",
+      "W.J. Shiu",
+      "C.A. Lu",
+      "C.Y. Liu",
+      "C.C. Chiu",
+      "T.H. Wen"
+    ],
+    "container": "Engineering Geology",
+    "type": "journal-article",
+    "year": 2023,
+    "month": 3,
+    "volume": "314",
+    "pages": "107000"
+  },
+  {
+    "title": "Evaluating coupled hydromechanical behavior of anisotropic rock mass using DEM",
+    "authors": [
+      "W.J. Shiu",
+      "M.C. Weng",
+      "C.C. Chiu",
+      "P.L. Wu"
+    ],
+    "container": "Bulletin of Engineering Geology and the Environment",
+    "type": "journal-article",
+    "year": 2022,
+    "month": 2,
+    "volume": "81",
+    "pages": "98"
+  },
+  {
+    "title": "Towards a rapid assessment of highway slope disasters by using multidisciplinary techniques",
+    "authors": [
+      "M.C. Weng",
+      "C.H. Lin",
+      "W.J. Shiu",
+      "W.A. Chao",
+      "C.C. Chiu",
+      "C.F. Lee",
+      "W.K. Huang",
+      "C.M. Yang"
+    ],
+    "container": "Landslides",
+    "type": "journal-article",
+    "year": 2022,
+    "month": 3,
+    "volume": "19",
+    "issue": "3",
+    "pages": "687-701"
+  },
+  {
+    "title": "用針貫入試驗法評估臺灣軟弱岩石力學行為之初探",
+    "authors": [
+      "李鴻",
+      "邱家吉"
+    ],
+    "container": "中華民國地球物理學會與中華民國地質學會 115 年年會暨學術研討會，嘉義",
+    "type": "conference-paper",
+    "year": 2026,
+    "month": 6
+  },
+  {
+    "title": "環境因素對消費級光達長期監測性能探討",
+    "authors": [
+      "袁振凱",
+      "邱家吉"
+    ],
+    "container": "中華民國地球物理學會與中華民國地質學會 115 年年會暨學術研討會，嘉義",
+    "type": "conference-paper",
+    "year": 2026,
+    "month": 6
+  },
+  {
+    "title": "三軸壓縮條件下花崗片麻岩裂隙演化之音射訊號分析",
+    "authors": [
+      "黃培瑜",
+      "邱家吉"
+    ],
+    "container": "中華民國地球物理學會與中華民國地質學會 115 年年會暨學術研討會，嘉義",
+    "type": "conference-paper",
+    "year": 2026,
+    "month": 6
+  },
+  {
+    "title": "離散元素法於大規模邊坡崩塌分析應用：以臺七線 49.8k 大曼崩塌為例",
+    "authors": [
+      "劉倫旭",
+      "邱家吉"
+    ],
+    "container": "中華民國地球物理學會與中華民國地質學會 115 年年會暨學術研討會，嘉義",
+    "type": "conference-paper",
+    "year": 2026,
+    "month": 6
+  },
+  {
+    "title": "大地工程數值分析方法之近期發展",
+    "authors": [
+      "邱家吉"
+    ],
+    "container": "地工技術",
+    "type": "domestic-journal",
+    "year": 2025,
+    "volume": "184",
+    "pages": "7-16"
+  },
+  {
+    "title": "AioT智能LiDAR變位預警監測系統",
+    "authors": [
+      "黃韋凱",
+      "邱家吉",
+      "羅偉庭"
+    ],
+    "container": "土木技師期刊",
+    "type": "domestic-journal",
+    "year": 2022,
+    "volume": "96",
+    "pages": "44-50"
+  },
+  {
+    "title": "道路邊坡災害資訊整合、模擬暨研判系統－GeoPORT",
+    "authors": [
+      "邱家吉",
+      "翁孟嘉",
+      "柳鈞元",
+      "趙韋安",
+      "林銘郎",
+      "林承翰",
+      "楊哲銘",
+      "黃韋凱",
+      "李璟芳",
+      "徐文杰"
+    ],
+    "container": "土木技師期刊",
+    "type": "domestic-journal",
+    "year": 2022,
+    "volume": "96",
+    "pages": "34-42"
+  },
+  {
+    "title": "節理岩體微觀力學模式之研究",
+    "authors": [
+      "邱家吉"
+    ],
+    "container": "國立臺灣大學土木工程學系博士論文，共 201 頁",
+    "type": "thesis",
+    "year": 2016
+  },
+  {
+    "title": "以個別元素法探討岩栓束制節理面剪脹之效應暨其對力學特性之影響",
+    "authors": [
+      "邱家吉"
+    ],
+    "container": "國立臺灣大學土木工程學系碩士論文，共 107 頁",
+    "type": "thesis",
+    "year": 2010
+  },
+  {
+    "title": "Preliminary study of the performance of consumer-grade lidar on monitoring",
+    "authors": [
+      "V. Lee",
+      "C.C. Chiu",
+      "M.C. Weng"
+    ],
+    "container": "22nd Southeast Asian Geotechnical Conference & 5th AGSSEA Conference, Taguig City, Philippines",
+    "type": "conference-paper",
+    "year": 2026,
+    "month": 1
+  },
+  {
+    "title": "基於點雲分析之裂隙軌跡萃取技術",
+    "authors": [
+      "邱家吉"
+    ],
+    "container": "2025 岩盤工程暨工程地質研討會，臺中",
+    "type": "conference-paper",
+    "year": 2025
+  },
+  {
+    "title": "震後落石暨土石流災害鍊模擬－以北迴線 K48 為例",
+    "authors": [
+      "林承翰",
+      "翁孟嘉",
+      "張家寧",
+      "林于超",
+      "郭覲豪",
+      "陳俊樺",
+      "邱家吉",
+      "林銘郎"
+    ],
+    "container": "2025 岩盤工程暨工程地質研討會，臺中",
+    "type": "conference-paper",
+    "year": 2025
+  },
+  {
+    "title": "利用 PFC3D 模擬鑽孔爆破初探",
+    "authors": [
+      "許淯維",
+      "邱家吉"
+    ],
+    "container": "2025 岩盤工程暨工程地質研討會，臺中",
+    "type": "conference-paper",
+    "year": 2025,
+    "month": 9
+  },
+  {
+    "title": "Robust 3D Point Cloud Classification Framework for Natural Environments with Mixed Surface Features",
+    "authors": [
+      "Robertus Belardo Laksmana",
+      "Chia-Chi Chiu"
+    ],
+    "container": "2025 岩盤工程暨工程地質研討會，臺中",
+    "type": "conference-paper",
+    "year": 2025,
+    "month": 9
+  },
+  {
+    "title": "Unexposed rock joint identification based on point cloud analysis",
+    "authors": [
+      "C.C. Chiu"
+    ],
+    "container": "ISRM International Symposium: Eurock 2025 – Expanding the Underground Space, Trondheim, Norway, No. 77",
+    "type": "conference-paper",
+    "year": 2025,
+    "month": 6
+  },
+  {
+    "title": "基於點雲分析之離散裂隙網絡建構技術研究",
+    "authors": [
+      "陳宥瑋",
+      "邱家吉"
+    ],
+    "container": "第二十屆大地工程學術研討會，臺南，Geotech2024-00017",
+    "type": "conference-paper",
+    "year": 2024
+  },
+  {
+    "title": "Rigid Block Spring Network 技術應用於岩石力學行為模擬初探",
+    "authors": [
+      "陳丞奐",
+      "邱家吉"
+    ],
+    "container": "第二十屆大地工程學術研討會，臺南，Geotech2024-00175",
+    "type": "conference-paper",
+    "year": 2024
+  },
+  {
+    "title": "考慮塊石幾何之卵礫石層現地直接剪力數值模擬",
+    "authors": [
+      "張正昊",
+      "邱家吉"
+    ],
+    "container": "第二十屆大地工程學術研討會，臺南，Geotech2024-00177",
+    "type": "conference-paper",
+    "year": 2024
+  },
+  {
+    "title": "Case study of program-assisted Q-system rating based on point cloud analysis",
+    "authors": [
+      "C.C. Chiu",
+      "C.Y. Liu"
+    ],
+    "container": "The 58th U.S. Rock Mechanics/Geomechanics Symposium, Denver, Colorado, ARMA-24-164",
+    "type": "conference-paper",
+    "year": 2024,
+    "month": 6
+  },
+  {
+    "title": "Discussion on the performance of consumer-grade LiDAR in landslides monitoring",
+    "authors": [
+      "Virgil Lee",
+      "C.C. Chiu"
+    ],
+    "container": "Japan Geoscience Union Meeting 2024, Chiba, Japan, HDS08-01",
+    "type": "conference-paper",
+    "year": 2024
+  },
+  {
+    "title": "不同強度人造岩石製備方式之研究",
+    "authors": [
+      "嚴浩倫",
+      "邱家吉"
+    ],
+    "container": "2023 岩盤工程暨工程地質研討會，新竹，A-1-1",
+    "type": "conference-paper",
+    "year": 2023
+  },
+  {
+    "title": "台九線大清水隧道落石災害調查與半自動化點雲分析",
+    "authors": [
+      "柳鈞元",
+      "邱家吉",
+      "李璟芳",
+      "黃韋凱",
+      "GeoPORT 團隊"
+    ],
+    "container": "2023 岩盤工程暨工程地質研討會，新竹，B-1-2",
+    "type": "conference-paper",
+    "year": 2023
+  },
+  {
+    "title": "以分離元素分析地震力作用下之邊坡滑移行為研究",
+    "authors": [
+      "蕭育婷",
+      "曾瀞萱",
+      "翁孟嘉",
+      "邱家吉",
+      "趙韋安"
+    ],
+    "container": "2023 岩盤工程暨工程地質研討會，新竹，B-1-9",
+    "type": "conference-paper",
+    "year": 2023
+  },
+  {
+    "title": "消費級光達於監測之性能探討",
+    "authors": [
+      "李大寬",
+      "邱家吉"
+    ],
+    "container": "2023 岩盤工程暨工程地質研討會，新竹，C-1-2",
+    "type": "conference-paper",
+    "year": 2023
+  },
+  {
+    "title": "消費級光達應用於擋土牆之長期監測",
+    "authors": [
+      "邱家吉",
+      "黃韋凱",
+      "羅偉庭"
+    ],
+    "container": "2023 岩盤工程暨工程地質研討會，新竹，C-1-3",
+    "type": "conference-paper",
+    "year": 2023
+  },
+  {
+    "title": "Influence of microscopic composition on the strength of rock-like materials under various loading rates",
+    "authors": [
+      "M.C. Weng",
+      "H.K. Le",
+      "H.H. Li",
+      "C.S. Lee",
+      "C.C. Chiu"
+    ],
+    "container": "15th ISRM Congress 2023 & 72nd Geomechanics Colloquium, Salzburg, Austria",
+    "type": "conference-paper",
+    "year": 2023
+  },
+  {
+    "title": "System of highway slope disaster information collection, integration, simulation and judgement",
+    "authors": [
+      "C.C. Chiu",
+      "W.J. Shiu",
+      "C.F. Lee",
+      "M.C. Weng",
+      "C.M. Yang"
+    ],
+    "container": "15th ISRM Congress 2023 & 72nd Geomechanics Colloquium, Salzburg, Austria",
+    "type": "conference-paper",
+    "year": 2023,
+    "month": 10
+  },
+  {
+    "title": "半自動化岩體評分程式之建構",
+    "authors": [
+      "邱家吉",
+      "柳鈞元"
+    ],
+    "container": "中華民國地球物理學會與中華民國地質學會 112 年暨學術研討會，桃園，EG-O-132",
+    "type": "conference-paper",
+    "year": 2023
+  },
+  {
+    "title": "粗糙度簡易估計法於臺灣岩體之適用性研究",
+    "authors": [
+      "洪定義",
+      "邱家吉"
+    ],
+    "container": "第十九屆大地工程學術研討會，新北，A-06",
+    "type": "conference-paper",
+    "year": 2022
+  },
+  {
+    "title": "道路邊坡災害資訊整合、模擬暨研判系統－GeoPORT（研討會）",
+    "authors": [
+      "邱家吉",
+      "翁孟嘉",
+      "柳鈞元",
+      "趙韋安",
+      "林銘郎",
+      "林承翰",
+      "楊哲銘",
+      "黃韋凱",
+      "李璟芳",
+      "徐文杰"
+    ],
+    "container": "第十九屆大地工程學術研討會，新北，G-07",
+    "type": "conference-paper",
+    "year": 2022
+  },
+  {
+    "title": "邊坡災害圖資彙整系統之建置",
+    "authors": [
+      "邱家吉",
+      "鄭安杰"
+    ],
+    "container": "2022 岩盤工程暨工程地質研討會，國立中央大學，桃園",
+    "type": "conference-paper",
+    "year": 2022,
+    "month": 5
+  },
+  {
+    "title": "鑽探對岩心擾動影響之探討",
+    "authors": [
+      "葉峻廷",
+      "邱家吉"
+    ],
+    "container": "2022 岩盤工程暨工程地質研討會，國立中央大學，桃園",
+    "type": "conference-paper",
+    "year": 2022,
+    "month": 5
+  },
+  {
+    "title": "離散裂隙網絡調查、分析與建置方法之初探",
+    "authors": [
+      "黃哲彥",
+      "邱家吉"
+    ],
+    "container": "2022 岩盤工程暨工程地質研討會，國立中央大學，桃園",
+    "type": "conference-paper",
+    "year": 2022,
+    "month": 5
+  },
+  {
+    "title": "考慮塊石幾何之卵礫石層數值分析研究",
+    "authors": [
+      "卓訓申",
+      "邱家吉"
+    ],
+    "container": "2022 岩盤工程暨工程地質研討會，國立中央大學，桃園",
+    "type": "conference-paper",
+    "year": 2022,
+    "month": 5
+  },
+  {
+    "title": "Simulation of Rock Hydraulics in Rock Joint by Using Discrete Element Method",
+    "authors": [
+      "C.C. Chiu",
+      "M.C. Weng"
+    ],
+    "container": "GeoChina 2021: Infrastructure Sustainability Through New Developments in Material, Design, Construction, Maintenance, and Testing of Pavements",
+    "type": "conference-paper",
+    "year": 2021,
+    "month": 7,
+    "pages": "177-183"
+  },
+  {
+    "title": "離散元素法之節理滲流分析模式建構",
+    "authors": [
+      "邱家吉"
+    ],
+    "container": "2020 第 18 屆大地工程學術研究討論會，屏東，I02（佳作）",
+    "type": "conference-paper",
+    "year": 2020
+  },
+  {
+    "title": "The model to simulate interface behavior in the particulate DEM: The particulate interface model",
+    "authors": [
+      "Jate C.C. Chiu",
+      "M.C. Weng"
+    ],
+    "container": "DEM8, Netherlands",
+    "type": "conference-paper",
+    "year": 2019
+  },
+  {
+    "title": "顆粒界面模式之建構與於岩石力學之應用",
+    "authors": [
+      "邱家吉",
+      "翁孟嘉"
+    ],
+    "container": "2018 臺灣岩盤工程研討會，國立成功大學，臺南（最佳論文獎）",
     "type": "conference-paper",
     "year": 2018,
     "pages": "471-476"
   },
   {
-    "title": "The Construction and Characteristic Investigation of Rock Material Microscopic Bonding Model",
-    "authors": ["C.C. Chiu", "M.C. Weng", "T.H. Huang"],
-    "container": "2014 Taiwan Rock Engineering Symposium, CYUT, Wufeng, Taichung",
+    "title": "岩材微觀膠結模式之建立與特性探討",
+    "authors": [
+      "邱家吉",
+      "翁孟嘉",
+      "黃燦輝"
+    ],
+    "container": "2014 臺灣岩盤工程研討會，朝陽科技大學，臺中，論文編號 A01（最佳論文獎）",
     "type": "conference-paper",
-    "year": 2014,
-    "pages": "A01"
+    "year": 2014
   },
   {
     "title": "A biconcave-shaped bonding model for DEM",
-    "authors": ["C.C. Chiu", "M.C. Weng", "T.H. Huang"],
+    "authors": [
+      "C.C. Chiu",
+      "M.C. Weng",
+      "T.H. Huang"
+    ],
     "container": "The Twenty-Sixth KKHTCNN Symposium on Civil Engineering, University Town, Singapore",
     "type": "conference-paper",
     "year": 2013,
     "pages": "G-1-4"
   },
   {
-    "title": "The Investigation of mechanical characteristic of regularly jointed rock masses through discrete element method",
-    "authors": ["C.C. Chiu", "T.T. Wang", "M.C. Weng", "T.H. Huang"],
-    "container": "2012 Taiwan Rock Engineering Symposium, NUU, Miaoli",
+    "title": "個別元素法模擬規則節理岩體力學特性之探討",
+    "authors": [
+      "邱家吉",
+      "翁孟嘉",
+      "王泰典",
+      "黃燦輝"
+    ],
+    "container": "2012 臺灣岩盤工程研討會，國立聯合大學，苗栗（優等）",
     "type": "conference-paper",
     "year": 2012
   },
   {
-    "title": "Simulate the mechanical behavior of jointed rock masses under uniaxial compression by discrete element method",
-    "authors": ["C.C. Chiu", "T.T. Wang", "T.H. Huang"],
-    "container": "2012 Taiwan Rock Engineering Symposium, KUAS, Kaohsiung",
-    "type": "conference-paper",
-    "year": 2012,
-    "pages": "271-280"
-  },
-  {
     "title": "Exploring the mechanical behavior of artificial jointed rock mass under uniaxial compression by distinct element method",
-    "authors": ["C.C. Chiu", "T.T. Wang", "M.C. Weng", "T.H. Huang"],
+    "authors": [
+      "C.C. Chiu",
+      "T.T. Wang",
+      "M.C. Weng",
+      "T.H. Huang"
+    ],
     "container": "The Twenty-Fourth KKCNN Symposium on Civil Engineering, Hyogo, Japan",
     "type": "conference-paper",
     "year": 2011,
     "pages": "361-364"
+  },
+  {
+    "title": "以個別元素法模擬節理岩體單軸壓縮下之力學特性",
+    "authors": [
+      "邱家吉",
+      "王泰典",
+      "黃燦輝"
+    ],
+    "container": "2010 臺灣岩盤工程研討會，國立高雄應用科技大學，高雄",
+    "type": "conference-paper",
+    "year": 2010,
+    "pages": "271-280"
   }
 ]
