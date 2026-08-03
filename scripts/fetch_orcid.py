@@ -56,14 +56,23 @@ ORCID_API = "https://pub.orcid.org/v3.0"
 CROSSREF_API = "https://api.crossref.org/works"
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FRAGMENT_PATH = os.path.join(REPO_ROOT, "publications-list.html")
 EXTRA_PATH = os.path.join(REPO_ROOT, "scripts", "extra_publications.json")
 
-# Every page carrying the marker pair gets the same list injected.
-TARGET_PAGES = [
-    os.path.join(REPO_ROOT, "publications.html"),
-    os.path.join(REPO_ROOT, "pi.html"),
-]
+# The list is rendered once per language: same works, translated headings and
+# link labels. Each fragment is written out on its own and injected into every
+# page of that language carrying the marker pair.
+OUTPUTS = {
+    "zh": {
+        "fragment": os.path.join(REPO_ROOT, "publications-list.html"),
+        "pages": [os.path.join(REPO_ROOT, "publications.html"),
+                  os.path.join(REPO_ROOT, "pi.html")],
+    },
+    "en": {
+        "fragment": os.path.join(REPO_ROOT, "publications-list-en.html"),
+        "pages": [os.path.join(REPO_ROOT, "en", "publications.html"),
+                  os.path.join(REPO_ROOT, "en", "pi.html")],
+    },
+}
 
 # ORCID work types -> the section they belong in.
 #
@@ -72,14 +81,20 @@ TARGET_PAGES = [
 # Crossref happen to type as books. Entries in extra_publications.json can use
 # the pseudo-types "domestic-journal" and "thesis", which ORCID has no notion of.
 SECTIONS = [
-    ("journal", u"國際期刊論文", {"journal-article", "review", "translation"}),
-    ("domestic", u"國內期刊論文", {"domestic-journal"}),
-    ("conference", u"研討會論文",
+    ("journal", {"zh": u"國際期刊論文", "en": u"International Journal Papers"},
+     {"journal-article", "review", "translation"}),
+    ("domestic", {"zh": u"國內期刊論文", "en": u"Domestic Journal Papers"},
+     {"domestic-journal"}),
+    ("conference", {"zh": u"研討會論文", "en": u"Conference Papers"},
      {"conference-paper", "conference-abstract", "conference-poster",
       "book", "book-chapter"}),
-    ("thesis", u"學位論文", {"thesis", "dissertation-thesis"}),
-    ("other", u"其他", {"report", "supervised-student-publication"}),
+    ("thesis", {"zh": u"學位論文", "en": u"Theses"},
+     {"thesis", "dissertation-thesis"}),
+    ("other", {"zh": u"其他", "en": u"Other"},
+     {"report", "supervised-student-publication"}),
 ]
+
+LINK_LABEL = {"zh": u"連結", "en": u"link"}
 DEFAULT_SECTION = "other"
 
 
@@ -296,7 +311,7 @@ def has_cjk(text):
 
 
 def section_key(work_type):
-    for key, _label, types in SECTIONS:
+    for key, _labels, types in SECTIONS:
         if work_type in types:
             return key
     return DEFAULT_SECTION
@@ -335,7 +350,7 @@ def format_locator(record):
     return ", ".join(bits)
 
 
-def format_citation(record):
+def format_citation(record, lang):
     title = record["title"]
     container = record["container"]
     locator = format_locator(record)
@@ -375,7 +390,8 @@ def format_citation(record):
         doi = escape(record["doi"])
         citation += ' <a href="https://doi.org/%s">doi:%s</a>' % (doi, doi)
     elif record.get("url"):
-        citation += ' <a href="%s">連結</a>' % escape(record["url"])
+        citation += ' <a href="%s">%s</a>' % (escape(record["url"]),
+                                                LINK_LABEL[lang])
     return citation
 
 
@@ -383,7 +399,7 @@ def sort_key(record):
     return (-(record["year"] or 0), -(record["month"] or 0), record["title"].lower())
 
 
-def render(records, generated_at):
+def render(records, generated_at, lang):
     buckets = {}
     for record in records:
         buckets.setdefault(section_key(record["type"]), []).append(record)
@@ -394,19 +410,19 @@ def render(records, generated_at):
         "     Works missing from ORCID belong in scripts/extra_publications.json. -->",
     ]
 
-    for key, label, _types in SECTIONS:
+    for key, labels, _types in SECTIONS:
         entries = sorted(buckets.get(key, []), key=sort_key)
         if not entries:
             continue
         lines.append("")
         lines.append("\t\t\t\t\t\t\t\t<section>")
-        lines.append("\t\t\t\t\t\t\t\t\t<h2>%s</h2>" % label)
+        lines.append("\t\t\t\t\t\t\t\t\t<h2>%s</h2>" % labels[lang])
         lines.append("\t\t\t\t\t\t\t\t\t<ol class=\"pubs\">")
         for record in entries:
             year = str(record["year"]) if record["year"] else "—"
             lines.append(
                 "\t\t\t\t\t\t\t\t\t\t<li><span class=\"year\">%s</span>"
-                "<span class=\"body\">%s</span></li>" % (year, format_citation(record))
+                "<span class=\"body\">%s</span></li>" % (year, format_citation(record, lang))
             )
         lines.append("\t\t\t\t\t\t\t\t\t</ol>")
         lines.append("\t\t\t\t\t\t\t\t</section>")
@@ -469,33 +485,39 @@ def main():
     records = merge(records, extras)
 
     generated_at = time.strftime("%Y-%m-%d", time.gmtime())
-    fragment = render(records, generated_at)
+    fragments = dict((lang, render(records, generated_at, lang)) for lang in OUTPUTS)
 
     if args.dry_run:
-        print("\n----- publications-list.html (dry run) -----\n")
-        sys.stdout.write(fragment)
+        for lang, fragment in sorted(fragments.items()):
+            print("\n----- %s (dry run) -----\n"
+                  % os.path.basename(OUTPUTS[lang]["fragment"]))
+            sys.stdout.write(fragment)
         print("\n----- %d works, nothing written -----" % len(records))
         return 0
 
-    # Render every target before writing anything, so a missing marker in the
-    # second page cannot leave the first one half-updated.
+    # Render every target before writing anything, so a missing marker in a
+    # later page cannot leave an earlier one half-updated.
     rendered = {}
-    for path in TARGET_PAGES:
-        if not os.path.exists(path):
-            raise FetchError("target page %s does not exist" % path)
-        with io.open(path, encoding="utf-8") as handle:
-            rendered[path] = inject(handle.read(), fragment, path)
+    for lang, cfg in OUTPUTS.items():
+        for path in cfg["pages"]:
+            if not os.path.exists(path):
+                raise FetchError("target page %s does not exist" % path)
+            with io.open(path, encoding="utf-8") as handle:
+                rendered[path] = inject(handle.read(), fragments[lang], path)
 
-    with io.open(FRAGMENT_PATH, "w", encoding="utf-8", newline="\n") as handle:
-        handle.write(fragment)
+    touched = []
+    for lang, cfg in OUTPUTS.items():
+        with io.open(cfg["fragment"], "w", encoding="utf-8", newline="\n") as handle:
+            handle.write(fragments[lang])
+        touched.append(cfg["fragment"])
     for path, text in rendered.items():
         with io.open(path, "w", encoding="utf-8", newline="\n") as handle:
             handle.write(text)
+        touched.append(path)
 
-    print("Wrote %s and updated %s (%d works)." % (
-        os.path.basename(FRAGMENT_PATH),
-        ", ".join(os.path.basename(p) for p in TARGET_PAGES),
-        len(records)))
+    print("Updated %d files with %d works:" % (len(touched), len(records)))
+    for path in sorted(touched):
+        print("  " + os.path.relpath(path, REPO_ROOT).replace(os.sep, "/"))
     return 0
 
 

@@ -1,0 +1,274 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Research</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/jpeg" href="../images/logo_small.jpg" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/custom.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+								<section class="page-title">
+									<header class="major">
+										<h1>Research</h1>
+									</header>
+								</section>
+
+								<section class="intro">
+									<div class="prose">
+										<p class="lead">Our work runs along a single axis: from <strong>characterization</strong> to <strong>modelling</strong>. Laboratory tests and field measurement establish how rock and rock masses actually behave; those observations are then turned into computable models; and numerical simulation finally answers the engineering and hazard questions.</p>
+										<p>Rock is a natural material, and its mechanical behaviour differs greatly from that of the man-made materials we usually deal with. At the microscopic scale the arrangement of mineral grains governs how cracks develop under load; at the macroscopic scale the distribution of joints governs stability and engineering behaviour. Understanding that behaviour is the core objective of this laboratory.</p>
+									</div>
+									<div class="row spectrum">
+										<div class="col-3 col-6-medium stage-card">
+											<span class="stage">01</span>
+											<h3><a href="#rocktesting">Rock Testing</a></h3>
+											<p>measuring material behaviour directly</p>
+										</div>
+										<div class="col-3 col-6-medium stage-card">
+											<span class="stage">02</span>
+											<h3><a href="#pointcloud">Point Cloud Analysis</a></h3>
+											<p>turning outcrops into quantitative data</p>
+										</div>
+										<div class="col-3 col-6-medium stage-card">
+											<span class="stage">03</span>
+											<h3><a href="#modeldev">Model Development</a></h3>
+											<p>translating observation into contact models</p>
+										</div>
+										<div class="col-3 col-6-medium stage-card">
+											<span class="stage">04</span>
+											<h3><a href="#simulation">Numerical Simulation</a></h3>
+											<p>answering real engineering questions</p>
+										</div>
+									</div>
+									<p class="axis"><span>Characterization</span><span class="arrow"></span><span>Modelling</span></p>
+								</section>
+
+								<section id="rocktesting">
+									<span class="stage">01</span>
+									<h2>Rock Testing</h2>
+									<div class="prose">
+										<p>The greatest difference between rock and other materials is that rock usually sits under high confining pressure, where its behaviour is quite unlike that at low confinement: strength rises markedly and the material turns from brittle to ductile. The triaxial system is therefore the central instrument of rock mechanics. Ours is a GCTS RTX-1000, used for uniaxial, triaxial and indirect tensile (Brazilian) tests, with a maximum load of 1000 kN and a maximum confining pressure of 70 MPa.</p>
+										<p>Beyond strength and deformability, results from several confining pressures are combined into failure criteria that feed the numerical models downstream.</p>
+										<p>More recently we added <strong>acoustic emission</strong> measurement: the elastic waves released as micro-cracks initiate and propagate are recorded during loading, so failure can be followed as a process rather than reduced to a single peak value. For the weak rocks common in Taiwan we also use the <strong>needle penetration test</strong> as a simple strength index.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/rt-triaxial.jpg" alt="" /><span class="caption">Triaxial specimen</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/rt-brazilian.jpg" alt="" /><span class="caption">Brazilian (indirect tensile) test</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/rt-failure-criterion.jpg" alt="" /><span class="caption">Failure criteria from several confining pressures</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/rt-acoustic-emission.jpg" alt="" /><span class="caption">Acoustic emission against load history</span></span></div>
+									</div>
+								</section>
+
+								<section id="pointcloud">
+									<span class="stage">02</span>
+									<h2>Point Cloud Analysis</h2>
+									<div class="prose">
+										<p>Field investigation is the first step towards understanding a site, and traditionally the most labour-intensive, the slowest and the most subjective. We build three-dimensional point clouds of outcrops by photogrammetry and LiDAR, then extract joint orientation, roughness and fracture traces algorithmically — turning field measurement into something <strong>quantitative and repeatable</strong>.</p>
+										<p>Current work covers outcrop characterization (joint sets, orientation distributions, JRC roughness statistics), fracture extraction and discrete fracture network construction, and a semi-automatic rock mass rating program that derives a Q-system score directly from the point cloud rather than from item-by-item engineering judgement.</p>
+										<p>We also collect engineering geological data from across Taiwan, compiling the mechanical properties of rock materials and joint surfaces into a database that design and construction organisations can use as a first reference.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/pc-field-measurement.jpg" alt="" /><span class="caption">Joint measurement in the field</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/pc-photogrammetry.jpg" alt="" /><span class="caption">Outcrop model from photogrammetry</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/pc-classified.jpg" alt="" /><span class="caption">Automatic point cloud clustering</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/pc-fracture-extraction.jpg" alt="" /><span class="caption">Fracture extraction and DFN</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/pc-stereonet.jpg" alt="" /><span class="caption">Joint orientation distribution</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/pc-jrc.jpg" alt="" /><span class="caption">JRC roughness statistics</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>Consumer-Grade LiDAR Monitoring</h3>
+									<div class="prose">
+										<p>High-end LiDAR is expensive and bulky, which makes long-term deployment impractical. We are investigating whether consumer-grade LiDAR — the kind built into mobile devices — is accurate enough for displacement monitoring: laboratory tests establish its error characteristics and the smallest detectable movement, long-term field monitoring validates it, and the influence of temperature and rainfall is analysed.</p>
+										<p>If it works, the cost of monitoring slopes and retaining structures over long periods drops sharply.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/lidar-field.jpg" alt="" /><span class="caption">Field deployment and scanning</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/lidar-lab.jpg" alt="" /><span class="caption">Laboratory displacement validation</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/lidar-insitu.jpg" alt="" /><span class="caption">Long-term monitoring of a retaining wall</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/lidar-data.jpg" alt="" /><span class="caption">Displacement against temperature and rainfall</span></span></div>
+									</div>
+								</section>
+
+								<section id="modeldev">
+									<span class="stage">03</span>
+									<h2>Model Development</h2>
+									<div class="prose">
+										<p>The discrete element method (DEM) was proposed by Cundall in 1971. It computes the motion of elements through a force&ndash;displacement relationship, reproducing macroscopic response from the interaction between particles, and — depending on whether bonds are introduced — can represent both continuous and discrete bodies.</p>
+										<p>Generic DEM contact models, however, rarely reflect how rock actually behaves. Our work is to turn laboratory and field observation into contact models the method can compute; this is where the laboratory&rsquo;s main academic contribution lies.</p>
+									</div>
+									<hr class="minor" />
+									<h3>Particulate Interface Model (PIM)</h3>
+									<div class="prose">
+										<p>An &ldquo;interface&rdquo; here means any contact surface between solids, not only geological weak planes such as joints or cleavage. In rock engineering the mechanical properties of interfaces govern the stability of the rock mass. The most advanced interface model available in DEM, the smooth joint model, does not account for the geometrical arrangement of particles during shearing, and so cannot reproduce interface behaviour accurately.</p>
+										<p>By considering the contact and separation of a group of particles under shear, introducing several corrections, and incorporating the two failure criteria most used in practice — Mohr&ndash;Coulomb and Barton&ndash;Bandis — we developed the <strong>Particulate Interface Model</strong>. Its input parameters can be taken straight from laboratory data without back-calculation, and it removes the dependence of the result on particle size.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/pim-scheme.jpg" alt="" /><span class="caption">Computation scheme of the model</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/pim-sliding.gif" alt="" /><span class="caption">Planar sliding with velocity-dependent friction</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/pim-performance.jpg" alt="" /><span class="caption">Consistent results across particle sizes</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>Seepage Model</h3>
+									<div class="prose">
+										<p>Water in a rock mass drives many engineering failures. We built a fracture seepage model within DEM in which the pore space between particles forms the flow path, extended it to three dimensions, and use it to study the hydrogeological behaviour of jointed rock masses and hydro-mechanical coupling.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/seepage-model.jpg" alt="" /><span class="caption">Pore space and interface contacts</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/seepage-2d.jpg" alt="" /><span class="caption">Two-dimensional fracture seepage</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/seepage-3d.jpg" alt="" /><span class="caption">Three-dimensional head distribution</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>Biconcave Bond Model</h3>
+									<div class="prose">
+										<p>Unlike soil, rock has considerable cohesion, and the cementation between grains governs its mechanical behaviour. Examining thin sections we found the cement between grains approximates a biconcave shape, and from that developed the <strong>Biconcave Bond Model</strong> together with the corresponding DEM contact algorithm.</p>
+										<p>When specimens of known geometry and fabric are simulated, the micro-scale parameters the model requires lie closer to the values measured in the laboratory — so predicting macroscopic behaviour from micro-scale parameters works better.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/cement-thinsection.jpg" alt="" /><span class="caption">Grains and cement in thin section</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/cement-geometry.jpg" alt="" /><span class="caption">Biconcave cement geometry</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/cement-stress.jpg" alt="" /><span class="caption">Stress distribution within the cement</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/cement-cracks.jpg" alt="" /><span class="caption">Simulated crack development</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>Gravel Deposit Modelling</h3>
+									<div class="prose">
+										<p>Gravel deposits are widespread in the foothills of western Taiwan. They are neither soil nor intact rock: a mixture of blocks of widely varying size in a fine matrix, whose behaviour is governed by the shape and arrangement of the blocks. Generic models that approximate particles as spheres cannot reproduce the real interaction and interlocking between them.</p>
+										<p>We scan actual blocks and rebuild them as numerical models that preserve their geometry, then use those to simulate triaxial and in-situ direct shear tests and examine how block content, shape and arrangement affect overall strength.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/gravel-outcrop.jpg" alt="" /><span class="caption">Gravel deposit outcrop</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/gravel-block-model.jpg" alt="" /><span class="caption">A block and its reconstructed model</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/gravel-specimen.jpg" alt="" /><span class="caption">Specimen simulation with block geometry</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>Jointed Rock Mass Simulation</h3>
+									<div class="prose">
+										<p>We tend to assume the rock around a geotechnical work is a homogeneous, isotropic foundation. That holds for an intact block or a heavily fractured mass, but once one or more joint sets are present the strength and deformability vary with direction and the behaviour becomes highly complex. Jointed rock masses are therefore one of the principal challenges of rock mass engineering.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/jrm.jpg" alt="" /><span class="caption">Jointed rock mass specimen</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/JRMcrk_40.gif" alt="" /><span class="caption">Crack development under loading</span></span></div>
+									</div>
+								</section>
+
+								<section id="simulation">
+									<span class="stage">04</span>
+									<h2>Numerical Simulation</h2>
+									<div class="prose">
+										<p>The last step is to apply those models to real cases: reproducing how a hazard developed, and supporting the authorities in their assessment and decisions.</p>
+										<p>We took part in the investigation and analysis of the Highway No. 7 49.8K landslide, covering rockfall simulation, debris flow and its interaction with a bridge, and estimation of the run-out after failure. This kind of work is collaborative — microseismic technique from NYCU, multiscale field survey from NTU and Sinotech, with this laboratory responsible for the discrete element modelling.</p>
+										<p>As development demands grow, designs become more complex and conventional calculation no longer suffices. Numerical analysis both examines the safety of a design in advance and reconstructs what happened after a failure.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/ds-survey.jpg" alt="" /><span class="caption">Site investigation at Highway No. 7 49.8K</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/ds-uav.jpg" alt="" /><span class="caption">Aerial view of the failure</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/ds-debris-bridge.gif" alt="" /><span class="caption">Debris flow interacting with a bridge</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/ds-microseismic.jpg" alt="" /><span class="caption">Microseismic signal analysis (NYCU)</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>Excavation Damaged Zone</h3>
+									<div class="prose">
+										<p>After a tunnel is excavated the surrounding rock is damaged by the redistribution of stress, forming a ring known as the <strong>excavation damaged zone (EDZ)</strong>. Its extent and the change in permeability across it determine both the long-term stability of the tunnel and the containment of a geological disposal facility.</p>
+										<p>We track the displacement developing at each excavation stage and the extent of the damaged zone using discrete and continuum analysis, extending the time scale from construction out to tens of thousands of years to assess how the zone evolves.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/edz-damage-zone.jpg" alt="" /><span class="caption">Extent of the damaged zone after excavation</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/edz-displacement.jpg" alt="" /><span class="caption">Displacement from excavation to the long term</span></span></div>
+									</div>
+								</section>
+
+								<section id="application">
+									<h2>Applications</h2>
+									<div class="prose">
+										<p>All of this points back to the practice of geotechnical and resources engineering. Foundation excavation, slope stability, dam analysis, tunnelling, the investigation and remediation of landslides — every one of them is bound up with people&rsquo;s daily lives. Every piece of construction has its foundation laid by geotechnical engineering: before Taipei 101 could rise, its piles had to be driven; before the high speed railway could be built, slopes had to be stabilised and tunnels excavated.</p>
+										<p>Taiwan is a place well worth exploring for this field. A small island holds structures and lithologies of every kind; its stone industry is advanced in both quarrying and processing; and because the geology is young and fragile, with severe rainfall and earthquakes, the demand for specialists in geotechnical engineering and hazard mitigation is very large.</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="../images/geme.jpg" alt="" /><span class="caption">Tunnel construction site</span></span></div>
+									</div>
+									<ul class="actions">
+										<li><a href="join.html" class="button">Join us</a></li>
+									</ul>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<a href="index.html"><img src="../images/logo.jpg" alt="" width="100%" /></a>
+									</header>
+									<ul>
+										<li>
+											<span class="opener">Research</span>
+											<ul>
+												<li><a href="research.html#rocktesting">Rock Testing</a></li>
+												<li><a href="research.html#pointcloud">Point Cloud Analysis</a></li>
+												<li><a href="research.html#modeldev">Model Development</a></li>
+												<li><a href="research.html#simulation">Numerical Simulation</a></li>
+											</ul>
+										</li>
+										<li><a href="publications.html">Publications</a></li>
+										<li>
+											<span class="opener">Facilities</span>
+											<ul>
+												<li><a href="apparatus.html#labequipment">Rock Testing Equipment</a></li>
+												<li><a href="apparatus.html#fieldequipment">Field Investigation</a></li>
+												<li><a href="apparatus.html#measurement">Surveying Instruments</a></li>
+												<li><a href="apparatus.html#scanning">3D Scanning</a></li>
+												<li><a href="apparatus.html#software">Software</a></li>
+											</ul>
+										</li>
+										<li><a href="members.html">Members</a></li>
+										<li><a href="join.html">Join Us</a></li>
+										<li><a href="../index.html">中文</a></li>
+									</ul>
+								</nav>
+
+							<!-- Contact -->
+								<section>
+									<header class="major">
+										<h4>Get in touch</h4>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope">ccchiu@ntut.edu.tw</li>
+										<li class="icon solid fa-phone">+886-2-27712171#2740</li>
+										<li class="icon solid fa-home">Room 304, Materials and Resources Building<br>No. 1, Sec. 3, Zhongxiao E. Rd.<br>Da'an Dist., Taipei 10608, Taiwan</li>
+									</ul>
+									<h6 class="copyright">Copyright &copy; Jate Chiu. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</h6>
+								</section>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
