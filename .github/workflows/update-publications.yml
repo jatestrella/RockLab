@@ -1,0 +1,47 @@
+name: Update publications from ORCID
+
+on:
+  schedule:
+    # Every Monday at 00:00 UTC (08:00 Taipei).
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-publications
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The script uses only the standard library, so there is nothing to install.
+      - name: Fetch works from ORCID
+        run: python scripts/fetch_orcid.py
+
+      - name: Commit if the list changed
+        env:
+          # Keep this in step with TARGET_PAGES in scripts/fetch_orcid.py.
+          TOUCHED: publications-list.html publications.html pi.html
+        run: |
+          if git diff --quiet -- $TOUCHED; then
+            echo "Publications are already up to date; nothing to commit."
+            exit 0
+          fi
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- $TOUCHED
+          git commit -m "Update publications from ORCID"
+          git push

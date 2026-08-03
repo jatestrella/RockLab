@@ -78,3 +78,172 @@
 		font-size: 0.9em;
 		letter-spacing: 0;
 	}
+
+/* ---------------------------------------------------------------------------
+   Layout additions for the restructured site.
+   Everything below builds on the template's own grid and components.
+   --------------------------------------------------------------------------- */
+
+/* Narrower sidebar: 26em took a fifth of a 1500px window to hold six links. */
+
+	#sidebar,
+	#sidebar > .inner {
+		width: 21em;
+	}
+
+	#sidebar .toggle {
+		left: 21em;
+	}
+
+	#sidebar.inactive {
+		margin-left: -21em;
+	}
+
+	@media screen and (min-width: 1281px) {
+		#main {
+			padding-left: 0;
+		}
+	}
+
+/* Hero and section leads. */
+
+/* The template styles header <p> as a subtitle sitting below the title, so it
+   needs unwinding when used as a kicker above one. */
+
+	.eyebrow {
+		color: #9fa3a6;
+		letter-spacing: 0;
+		margin: 0 0 0.5em 0;
+		text-transform: none;
+	}
+
+/* Tall portrait photos must not fill the viewport when used as a banner. */
+
+	.image.main img {
+		max-height: 30em;
+		object-fit: cover;
+	}
+
+	.lead {
+		color: #5f686f;
+		font-size: 1.1em;
+	}
+
+	#hero .image.main {
+		margin-bottom: 2em;
+	}
+
+	hr.minor {
+		margin: 2em 0;
+	}
+
+/* Dated lists: news on the home page, references on the publications page. */
+
+	ul.news,
+	ol.pubs {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 2em;
+	}
+
+	ul.news li,
+	ol.pubs li {
+		border-top: solid 1px rgba(210, 215, 217, 0.75);
+		display: flex;
+		gap: 1.5em;
+		padding: 1em 0;
+	}
+
+	ul.news li:first-child,
+	ol.pubs li:first-child {
+		border-top: 0;
+	}
+
+	.news .date,
+	.pubs .year {
+		color: #9fa3a6;
+		flex: 0 0 5.5em;
+		font-size: 0.9em;
+		padding-top: 0.15em;
+	}
+
+	.news .body,
+	.pubs .body {
+		flex: 1 1 auto;
+	}
+
+	@media screen and (max-width: 736px) {
+		ul.news li,
+		ol.pubs li {
+			display: block;
+		}
+
+		.news .date,
+		.pubs .year {
+			display: block;
+			margin-bottom: 0.25em;
+		}
+	}
+
+/* Card images: the source photos have very different proportions, so crop
+   them to one ratio or the cards below them never line up. */
+
+	.topic .image img,
+	.posts article .image img,
+	.member .image img {
+		aspect-ratio: 16 / 10;
+		object-fit: cover;
+	}
+
+	.member .image img {
+		aspect-ratio: 1 / 1;
+	}
+
+	.topic h3 {
+		margin-bottom: 0.5em;
+	}
+
+/* The affiliation line sits above the title; underlined links shout there. */
+
+	.eyebrow a {
+		border-bottom: 0;
+		color: inherit;
+	}
+
+/* Member cards. */
+
+	.member h3 {
+		margin-bottom: 0.25em;
+	}
+
+	.member p {
+		font-size: 0.9em;
+	}
+
+/* Captioned gallery images. */
+
+	.gallery .caption {
+		color: #9fa3a6;
+		display: block;
+		font-size: 0.85em;
+		padding-top: 0.5em;
+		text-align: center;
+	}
+
+/* An email address should not be shouted in caps like the other buttons. */
+
+	.button.email {
+		text-transform: none;
+	}
+
+/* Call to action. */
+
+	.box.cta {
+		background-color: #f5f6f7;
+		border: 0;
+		padding: 2em;
+	}
+
+	.box.cta > :last-child {
+		margin-bottom: 0;
+	}

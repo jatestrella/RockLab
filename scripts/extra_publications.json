@@ -1,0 +1,50 @@
+[
+  {
+    "_comment": "Works that are not in ORCID. Seeded from jatestrella.github.io/WebSite. Add new entries here only when a paper has no ORCID record; anything with a DOI is better added to ORCID itself, where it will be picked up automatically.",
+    "title": "The Construction of the particulate interface model and the application on rock mechanics",
+    "authors": ["C.C. Chiu", "M.C. Weng"],
+    "container": "2018 Taiwan Rock Engineering Symposium, NCKU, Tainan",
+    "type": "conference-paper",
+    "year": 2018,
+    "pages": "471-476"
+  },
+  {
+    "title": "The Construction and Characteristic Investigation of Rock Material Microscopic Bonding Model",
+    "authors": ["C.C. Chiu", "M.C. Weng", "T.H. Huang"],
+    "container": "2014 Taiwan Rock Engineering Symposium, CYUT, Wufeng, Taichung",
+    "type": "conference-paper",
+    "year": 2014,
+    "pages": "A01"
+  },
+  {
+    "title": "A biconcave-shaped bonding model for DEM",
+    "authors": ["C.C. Chiu", "M.C. Weng", "T.H. Huang"],
+    "container": "The Twenty-Sixth KKHTCNN Symposium on Civil Engineering, University Town, Singapore",
+    "type": "conference-paper",
+    "year": 2013,
+    "pages": "G-1-4"
+  },
+  {
+    "title": "The Investigation of mechanical characteristic of regularly jointed rock masses through discrete element method",
+    "authors": ["C.C. Chiu", "T.T. Wang", "M.C. Weng", "T.H. Huang"],
+    "container": "2012 Taiwan Rock Engineering Symposium, NUU, Miaoli",
+    "type": "conference-paper",
+    "year": 2012
+  },
+  {
+    "title": "Simulate the mechanical behavior of jointed rock masses under uniaxial compression by discrete element method",
+    "authors": ["C.C. Chiu", "T.T. Wang", "T.H. Huang"],
+    "container": "2012 Taiwan Rock Engineering Symposium, KUAS, Kaohsiung",
+    "type": "conference-paper",
+    "year": 2012,
+    "pages": "271-280"
+  },
+  {
+    "title": "Exploring the mechanical behavior of artificial jointed rock mass under uniaxial compression by distinct element method",
+    "authors": ["C.C. Chiu", "T.T. Wang", "M.C. Weng", "T.H. Huang"],
+    "container": "The Twenty-Fourth KKCNN Symposium on Civil Engineering, Hyogo, Japan",
+    "type": "conference-paper",
+    "year": 2011,
+    "pages": "361-364"
+  }
+]
