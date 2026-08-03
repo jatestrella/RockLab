@@ -1,0 +1,3 @@
+# Source material for the site, not part of it: the PPTX is over 100 MB, which
+# is GitHub's hard limit for a single file.
+*.pptx

@@ -90,6 +90,26 @@
    Everything below builds on the template's own grid and components.
    --------------------------------------------------------------------------- */
 
+/* The template stretches #sidebar to the full document height but leaves the
+   menu inside it at the very top, so on a long page the navigation scrolls out
+   of reach and the reader is left with an empty grey column. Sticking the inner
+   block keeps the menu in view. The height cap matters on short laptop screens:
+   the menu is around 830px tall, so without it the contact details and
+   copyright would be cut off below the fold.
+
+   Only above 1280px -- narrower than that the template already turns the
+   sidebar into a fixed overlay driven by the toggle. */
+
+	@media screen and (min-width: 1281px) {
+		#sidebar > .inner {
+			max-height: 100vh;
+			overflow-y: auto;
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+		}
+	}
+
 /* Narrower sidebar: 26em took a fifth of a 1500px window to hold six links. */
 
 	#sidebar,
@@ -156,6 +176,66 @@
 		margin: 2em 0;
 	}
 
+/* Body copy now spans the full column instead of sitting beside a figure, so it
+   needs a measure of its own -- unchecked, a line would run past 40 Chinese
+   characters and the eye loses its place returning to the next line. */
+
+	.prose {
+		max-width: 46em;
+	}
+
+/* The research page runs Characterization -> Modelling across four numbered
+   stages; the numeral is a quiet marker, not a heading. */
+
+	.stage {
+		color: #9fa3a6;
+		display: block;
+		font-size: 0.85em;
+		font-weight: 700;
+		letter-spacing: 0.15em;
+		margin-bottom: 0.35em;
+	}
+
+	.stage-card .stage {
+		color: #46698f;
+	}
+
+	.stage-card h3 {
+		margin-bottom: 0.4em;
+	}
+
+	.stage-card p {
+		color: #9fa3a6;
+		font-size: 0.9em;
+	}
+
+	.row.spectrum {
+		margin-top: 2em;
+	}
+
+	p.axis {
+		align-items: center;
+		color: #9fa3a6;
+		display: flex;
+		font-size: 0.85em;
+		gap: 1em;
+		letter-spacing: 0.1em;
+		margin-top: 0.5em;
+		text-transform: uppercase;
+	}
+
+	p.axis .arrow {
+		background: linear-gradient(to right, rgba(210, 215, 217, 0.75), #46698f);
+		flex: 1 1 auto;
+		height: 2px;
+	}
+
+	@media screen and (max-width: 736px) {
+		p.axis {
+			display: none;
+		}
+	}
+
 /* A section holding nothing but the page title would otherwise contribute a
    full section's padding plus a divider before the content starts. */
 
@@ -170,6 +250,18 @@
 	#main > .inner > section.page-title + section {
 		border-top: 0 !important;
 		padding-top: 2.5em;
+	}
+
+/* The Characterization -> Modelling axis already closes the overview, so the
+   rule the template would draw under it is one divider too many. */
+
+	#main > .inner > section.intro + section {
+		border-top: 0 !important;
+		padding-top: 3em;
+	}
+
+	#main > .inner > section.intro {
+		padding-bottom: 2em;
 	}
 
 /* Dated lists: news on the home page, references on the publications page. */
@@ -273,7 +365,18 @@
 		width: 100%;
 	}
 
-/* Captioned gallery images. */
+/* Captioned gallery images.
+
+   The figures come from papers and slides, so their proportions vary wildly
+   (520x390 photos next to 1200x692 charts). Cropping them to a common ratio is
+   not an option -- it would cut the axes off a plot -- so each sits in a fixed
+   box and is scaled to fit. That keeps every row level and the captions aligned. */
+
+	.gallery .image img {
+		aspect-ratio: 4 / 3;
+		background-color: #f5f6f7;
+		object-fit: contain;
+	}
 
 	.gallery .caption {
 		color: #9fa3a6;

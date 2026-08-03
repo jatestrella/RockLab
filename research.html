@@ -22,85 +22,188 @@
 					<div id="main">
 						<div class="inner">
 
-								<section>
+								<section class="page-title">
 									<header class="major">
 										<h1>研究方向</h1>
 									</header>
-									<p class="lead">本研究室的工作環繞四個彼此相連的主題：從岩石材料的力學行為出發，以數值分析作為探究工具，透過工程地質掌握現地條件，最終回饋到大地與資源工程的實務。</p>
 								</section>
 
-								<section class="row" id="rockmechanics">
-									<div class="col-8 col-12-medium">
-										<h2>岩石力學</h2>
+								<section class="intro">
+									<div class="prose">
+										<p class="lead">本研究室的工作沿著一條軸線展開：從<strong>特性描述</strong>到<strong>模式建構</strong>。先以室內試驗與現地量測掌握岩石與岩體的真實行為，再把觀察轉換成可計算的模式，最後以數值模擬回答工程與防災的問題。</p>
 										<p>岩石為天然產物，力學行為迥異於一般常見人造材料。從微觀角度出發，岩石材料的晶粒排列影響了受力後的裂紋發展；自巨觀角度審視，岩體的節理面分布對其穩定性及工程行為有重大影響。因此，探討岩石的力學行為，為本研究室的核心目標。</p>
 									</div>
-									<div class="col-4 col-12-medium">
-										<span class="image fit"><img src="images/rm.jpg" alt="" /></span>
+									<div class="row spectrum">
+										<div class="col-3 col-6-medium stage-card">
+											<span class="stage">01</span>
+											<h3><a href="#rocktesting">岩石試驗</a></h3>
+											<p>以室內試驗直接量測材料行為</p>
+										</div>
+										<div class="col-3 col-6-medium stage-card">
+											<span class="stage">02</span>
+											<h3><a href="#pointcloud">點雲分析</a></h3>
+											<p>把野外露頭轉為可量化的三維資料</p>
+										</div>
+										<div class="col-3 col-6-medium stage-card">
+											<span class="stage">03</span>
+											<h3><a href="#modeldev">模式開發</a></h3>
+											<p>將觀察轉換成可計算的接觸模式</p>
+										</div>
+										<div class="col-3 col-6-medium stage-card">
+											<span class="stage">04</span>
+											<h3><a href="#simulation">數值模擬</a></h3>
+											<p>回答工程與防災的實際問題</p>
+										</div>
 									</div>
-									<hr class="major col-12" />
+									<p class="axis"><span>Characterization</span><span class="arrow"></span><span>Modelling</span></p>
 								</section>
 
-								<section class="row" id="numericalanalysis">
-									<div class="col-8 col-12-medium">
-										<h2>數值分析</h2>
-										<p>離散元素法(Discrete element method)是一個新興的數值分析工具，最初由Cundall於1971年提出，用以分析岩石塊體的漸進式破壞問題。離散元素法透過力－位移關係計算元素的運動行為，分析顆粒間交互作用及影響，藉以探討研究人員感興趣的課題。其應用範圍極廣，透過鍵結模式的設定與否，兼具可模擬連續塊體及離散塊體之特性，可探討的問題概分為顆粒材料運動行為、承載力及破裂行為、塊體高度摩擦之力學行為，以及綜合兩種以上特性之複雜問題。</p>
+								<section id="rocktesting">
+									<span class="stage">01</span>
+									<h2>岩石試驗</h2>
+									<div class="prose">
+										<p>岩石與其他材料最大的差異，在於它常處於高圍壓環境，而高圍壓下的力學行為與低圍壓截然不同 —— 除了強度明顯提升，岩石也會從脆性轉為延性。因此三軸試驗系統是岩石力學最核心的設備。本研究室以美國 GCTS 公司之 RTX-1000 進行單軸壓縮、三軸壓縮與間接張力（巴西）試驗，最大載重 1000 kN、最大圍壓 70 MPa。</p>
+										<p>除了求得強度與變形性，我們也由多組圍壓下的試驗結果建立破壞準則，作為後續數值模式的輸入依據。</p>
+										<p>近年加入<strong>音射訊號（Acoustic Emission）</strong>量測：在加載過程中記錄岩石內部微裂隙萌生與擴展所釋放的彈性波，藉此追蹤破壞的發展歷程，而不只是取得破壞當下的單一強度值。另針對臺灣常見的軟弱岩石，以<strong>針貫入試驗</strong>建立簡易的強度評估方法。</p>
 									</div>
-									<div class="col-4 col-12-medium">
-										<span class="image fit"><img src="images/PIM with velocity-dependent law.gif" alt="" /></span>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/rt-triaxial.jpg" alt="" /><span class="caption">三軸壓縮試體</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/rt-brazilian.jpg" alt="" /><span class="caption">巴西試驗（間接張力）</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/rt-failure-criterion.jpg" alt="" /><span class="caption">由多組圍壓建立破壞準則</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/rt-acoustic-emission.jpg" alt="" /><span class="caption">音射訊號與載重歷時</span></span></div>
 									</div>
-									<hr class="minor col-12" />
-									<div class="col-8 col-12-medium">
-										<h3>顆粒界面模式 PIM</h3>
-										<p>「界面」泛指任何固體間的接觸面，不僅限於節理或劈理等地質弱面。在岩體工程中，界面的力學性質主控了岩體的穩定性。然而目前離散元素法中最先進之界面模式－平滑節理模式，因未考慮顆粒受剪時之幾何排列與參數關係，無法提供準確的界面力學行為模擬結果。</p>
-										<p>為解決此問題，本團隊考慮了顆粒群受剪時之接觸與分離特性，納入多項修正計算，並將工程界最常使用的 Mohr-Coulomb 及 Barton-Bandis 兩種破壞準則納入模式中，開發出顆粒界面模式(Particulate Interface Model，PIM)。PIM 所使用的輸入參數可直接採用實驗室實驗資料而無須進行反算或修改，提升了離散元素法用於預測岩石工程災害之可能性。</p>
-									</div>
-									<div class="col-4 col-12-medium">
-										<span class="image fit"><img src="images/model_pp.jpg" alt="" /></span>
-									</div>
-									<hr class="minor col-12" />
-									<div class="col-8 col-12-medium">
-										<h3>雙凹鍵結模式</h3>
-										<p>不同於土壤，岩石材料具有相當高的凝聚力，晶粒間膠結性質為影響其力學行為中之重要因子。在觀察岩材薄片的過程中，我們發現晶粒間膠結形式近似於雙凹形狀，因此發展了雙凹鍵結模式(Biconcave bond model)。</p>
-										<p>以雙凹鍵結模式模擬幾何及組構已知之試體時，所使用的微觀材料參數較接近實驗室試驗所得之數值，顯示以微觀材料參數與試體組構預測巨觀力學行為時，雙凹鍵結模式之表現較佳。</p>
-									</div>
-									<div class="col-4 col-12-medium">
-										<span class="image fit"><img src="images/sheet.jpg" alt="" /></span>
-										<span class="image fit"><img src="images/sheet_matrix.jpg" alt="" /></span>
-									</div>
-									<hr class="minor col-12" />
-									<div class="col-8 col-12-medium">
-										<h3>節理岩體模擬</h3>
-										<p>我們常認為大地工程周遭的岩石是堅固的基盤，並假設其力學性質為均質均向。這種觀點對於完整岩塊或很破碎的岩體而言是合適的，然而當岩體含有一組或多組以上的節理面時，其力學行為便具有異向性，強度及變形性隨方向而異，十分複雜。因此節理岩體在工程設計上的難度相當高，這也是岩體工程最主要的挑戰之一。</p>
-									</div>
-									<div class="col-4 col-12-medium">
-										<span class="image fit"><img src="images/jrm.jpg" alt="" /></span>
-										<span class="image fit"><img src="images/JRMcrk_40.gif" alt="" /></span>
-									</div>
-									<hr class="major col-12" />
 								</section>
 
-								<section class="row" id="engineeringgeology">
-									<div class="col-8 col-12-medium">
-										<h2>工程地質</h2>
-										<p>大地工程必須在天然材料如岩石及土壤上興建，而天然材料的特性千變萬化，若想在自然界進行雕塑，就必須先了解地質。因此，大地工程與地質科學的橋梁－工程地質，為十分重要的研究議題。</p>
-										<p>本研究室所著重的工程地質領域包括現地調查、工程地質資訊蒐集以及資料庫建置。現地調查包含節理岩體之不連續面位態調查、岩體評分及岩石材料強度初估等。工程地質資訊蒐集方面，我們希望尋找全台不同區域的工程資料，進行岩石材料及節理面力學性質的彙整，分析後建置工程地質資料庫，作為設計及施工單位初步的參考依據。</p>
+								<section id="pointcloud">
+									<span class="stage">02</span>
+									<h2>點雲分析</h2>
+									<div class="prose">
+										<p>現地調查是了解工址特性的第一步，也是傳統上最仰賴人工、最耗時、結果最主觀的一步。我們以攝影測量與光達建立露頭的三維點雲，再用演算法自動萃取節理位態、粗糙度與裂隙軌跡，把野外量測轉為<strong>量化且可重複</strong>的流程。</p>
+										<p>目前的工作包括露頭特性描述（節理組數、位態分布、JRC 粗糙度統計）、裂隙萃取與離散裂隙網絡（DFN）建置，以及半自動化的岩體評分程式 —— 讓 Q-system 這類原本需要工程師逐項判釋的評分，能由點雲資料直接推算。</p>
+										<p>我們同時蒐集全臺不同區域的工程地質資料，彙整岩石材料與節理面的力學性質並建置資料庫，作為設計及施工單位初步的參考依據。</p>
 									</div>
-									<div class="col-4 col-12-medium">
-										<span class="image fit"><img src="images/eg.jpg" alt="" /></span>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/pc-field-measurement.jpg" alt="" /><span class="caption">現地節理量測</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/pc-photogrammetry.jpg" alt="" /><span class="caption">攝影測量建立露頭模型</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/pc-classified.jpg" alt="" /><span class="caption">點雲自動分群</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/pc-fracture-extraction.jpg" alt="" /><span class="caption">裂隙萃取與離散裂隙網絡</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/pc-stereonet.jpg" alt="" /><span class="caption">節理位態分布</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/pc-jrc.jpg" alt="" /><span class="caption">JRC 粗糙度統計</span></span></div>
 									</div>
-									<hr class="major col-12" />
+									<hr class="minor" />
+									<h3>消費級光達監測</h3>
+									<div class="prose">
+										<p>高階光達昂貴且笨重，難以長期布設。我們探討消費級光達（例如行動裝置內建的 LiDAR）用於位移監測的可行性：先以室內試驗建立其誤差特性與可偵測的最小位移量，再透過長期現地監測驗證，並分析溫度、降雨等環境因素對量測結果的影響。</p>
+										<p>若可行，這將大幅降低邊坡與擋土結構長期監測的門檻。</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/lidar-field.jpg" alt="" /><span class="caption">現地架設與掃描</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/lidar-lab.jpg" alt="" /><span class="caption">室內位移驗證試驗</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/lidar-insitu.jpg" alt="" /><span class="caption">擋土牆長期監測</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/lidar-data.jpg" alt="" /><span class="caption">位移與溫度、降雨的關聯</span></span></div>
+									</div>
 								</section>
 
-								<section class="row" id="geotechnical">
-									<div class="col-8 col-12-medium">
-										<h2>大地與資源工程</h2>
-										<p>大地工程包含的範疇很大，凡舉基礎開挖、邊坡穩定、大壩分析、隧道開挖、崩塌地調查治理等，均屬於大地工程的一部分。每個領域都與人民的生活息息相關，是與社會高度連結的產業。「所有的建設，都要透過大地工程建立基礎。蓋台北一零一需先打設基樁，興建高鐵前要先治理邊坡與挖掘隧道。我們可以算是臺灣重大建設的先鋒部隊。」不僅如此，大地工程學的技術及理論，也與資源開採及地質調查等相關領域息息相關。</p>
-										<p>對於大地與資源組而言，臺灣非常值得發掘。我們有多元的地質環境，小小一個臺灣島就擁有各式各樣的構造及岩性；我們也有極具特色的石礦產業，不論是開採或是加工，臺灣的技術都相當進步；由於年輕脆弱的地質條件，加上高強度的降雨及地震，大地工程及防災上的人才需求量十分龐大。</p>
+								<section id="modeldev">
+									<span class="stage">03</span>
+									<h2>模式開發</h2>
+									<div class="prose">
+										<p>離散元素法（Discrete Element Method, DEM）最初由 Cundall 於 1971 年提出，透過力－位移關係計算元素的運動行為，藉由顆粒間的交互作用重現材料的巨觀反應。它的應用範圍極廣，透過鍵結設定與否，兼具模擬連續塊體與離散塊體的能力。</p>
+										<p>然而通用的 DEM 接觸模式往往無法反映岩石的真實行為。本研究室的工作，是把試驗與現地觀察轉換成 DEM 中可計算的接觸模式 —— 這也是我們最主要的學術貢獻所在。</p>
 									</div>
-									<div class="col-4 col-12-medium">
-										<span class="image fit"><img src="images/geme.jpg" alt="" /></span>
+									<hr class="minor" />
+									<h3>顆粒界面模式 PIM</h3>
+									<div class="prose">
+										<p>「界面」泛指任何固體間的接觸面，不僅限於節理或劈理等地質弱面。在岩體工程中，界面的力學性質主控了岩體的穩定性。然而 DEM 中最先進的平滑節理模式，因未考慮顆粒受剪時的幾何排列與參數關係，無法提供準確的界面力學行為。</p>
+										<p>我們考慮顆粒群受剪時的接觸與分離特性，納入多項修正計算，並將工程界最常使用的 Mohr-Coulomb 與 Barton-Bandis 破壞準則納入模式，開發出<strong>顆粒界面模式（Particulate Interface Model, PIM）</strong>。其輸入參數可直接採用實驗室試驗資料，無須反算或修改，同時解決了模擬結果隨顆粒尺寸改變的問題。</p>
 									</div>
-									<hr class="major col-12" />
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/pim-scheme.jpg" alt="" /><span class="caption">顆粒界面模式的計算流程</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/pim-sliding.gif" alt="" /><span class="caption">考慮速度相依摩擦的平面滑動</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/pim-performance.jpg" alt="" /><span class="caption">不同顆粒尺寸下結果一致</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>滲流模式</h3>
+									<div class="prose">
+										<p>岩體中的水是許多工程災害的推手。我們在 DEM 中建立裂隙滲流的分析模式，由顆粒間的孔隙構成流動路徑，並延伸至三維，用以探討節理岩體的水文地質行為與水力－力學耦合問題。</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/seepage-model.jpg" alt="" /><span class="caption">孔隙與界面接觸的組成</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/seepage-2d.jpg" alt="" /><span class="caption">二維裂隙滲流</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/seepage-3d.jpg" alt="" /><span class="caption">三維滲流水頭分布</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>雙凹鍵結模式</h3>
+									<div class="prose">
+										<p>不同於土壤，岩石具有相當高的凝聚力，晶粒間的膠結性質是影響其力學行為的關鍵。在觀察岩材薄片時我們發現，晶粒間的膠結形狀近似雙凹形，據此發展出<strong>雙凹鍵結模式（Biconcave Bond Model）</strong>並建立對應的 DEM 接觸演算法。</p>
+										<p>以此模式模擬幾何與組構已知的試體時，所需的微觀參數較接近實驗室量測值，顯示由微觀參數預測巨觀行為時表現更佳。</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/cement-thinsection.jpg" alt="" /><span class="caption">岩材薄片中的晶粒與膠結</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/cement-geometry.jpg" alt="" /><span class="caption">雙凹形膠結幾何</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/cement-stress.jpg" alt="" /><span class="caption">膠結內應力分布</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/cement-cracks.jpg" alt="" /><span class="caption">模擬的裂紋發展</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>卵礫石層數值分析模式</h3>
+									<div class="prose">
+										<p>臺灣西部麓山帶廣泛分布卵礫石層。它既不是土壤也不是完整岩體：由粒徑差異極大的塊石與細粒基質組成，力學行為由塊石的幾何形狀與排列主導。以圓形顆粒近似的通用數值模式無法反映塊石之間真實的互制與互鎖。</p>
+										<p>我們將實際塊石掃描重建為保留幾何特徵的數值模型，用於模擬三軸試驗與現地直接剪力試驗，探討塊石含量、形狀與排列對整體強度的影響。</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/gravel-outcrop.jpg" alt="" /><span class="caption">卵礫石層露頭</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/gravel-block-model.jpg" alt="" /><span class="caption">塊石原貌與重建的數值模型</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/gravel-specimen.jpg" alt="" /><span class="caption">考慮塊石幾何的試體模擬</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>節理岩體模擬</h3>
+									<div class="prose">
+										<p>我們常假設工程周遭的岩石是均質均向的堅固基盤。這對完整岩塊或高度破碎的岩體是合適的，但當岩體含有一組以上的節理面時，其強度與變形性會隨方向而異，力學行為十分複雜。節理岩體因此是岩體工程最主要的挑戰之一。</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/jrm.jpg" alt="" /><span class="caption">節理岩體試體</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/JRMcrk_40.gif" alt="" /><span class="caption">受壓後的裂紋發展</span></span></div>
+									</div>
+								</section>
+
+								<section id="simulation">
+									<span class="stage">04</span>
+									<h2>數值模擬</h2>
+									<div class="prose">
+										<p>最後一哩是把前面建立的模式用到真實案例上：重現災害發生的過程，並協助主管機關進行判斷與決策。</p>
+										<p>我們曾參與臺七線 49.8K 大曼崩塌的災害調查與分析，工作涵蓋落石模擬、土石流與橋梁互制的模擬，以及崩塌後的運移範圍推估。這類分析多為跨單位合作 —— 微地震技術由陽明交大提供，多尺度現地調查由臺大與中興工程協同執行，本研究室負責離散元素法的模擬部分。</p>
+										<p>隨著開發需求提升，工程設計越加複雜，傳統的力學計算已無法滿足實務所需。數值分析不僅能透過模擬探討設計安全性，也能在災害發生後快速還原過程、掌握可能的風險。</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/ds-survey.jpg" alt="" /><span class="caption">臺七線 49.8K 災害勘查</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/ds-uav.jpg" alt="" /><span class="caption">空拍崩塌範圍</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/ds-debris-bridge.gif" alt="" /><span class="caption">土石流與橋梁互制模擬</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/ds-microseismic.jpg" alt="" /><span class="caption">微地震訊號分析（陽明交大）</span></span></div>
+									</div>
+									<hr class="minor" />
+									<h3>隧道開挖損傷帶演化評估</h3>
+									<div class="prose">
+										<p>隧道開挖後，周圍岩體會因應力重新分布而產生一圈受損的區域，稱為<strong>開挖損傷帶（Excavation Damaged Zone, EDZ）</strong>。這圈區域的範圍與滲透性變化，同時決定了隧道的長期穩定與地質處置設施的封閉性。</p>
+										<p>我們以離散元素法與連體分析追蹤各開挖階段的位移發展與損傷帶的形成範圍，並把時間尺度由施工期延伸到數萬年，評估損傷帶隨時間的演化。</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/edz-damage-zone.jpg" alt="" /><span class="caption">開挖後的損傷帶範圍</span></span></div>
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/edz-displacement.jpg" alt="" /><span class="caption">由開挖階段延伸至長期的位移發展</span></span></div>
+									</div>
+								</section>
+
+								<section id="application">
+									<h2>應用領域</h2>
+									<div class="prose">
+										<p>上述工作最終都指向大地與資源工程的實務。基礎開挖、邊坡穩定、大壩分析、隧道開挖、崩塌地調查治理 —— 每個領域都與人民的生活息息相關。所有的建設都要透過大地工程建立基礎：蓋台北一零一需先打設基樁，興建高鐵前要先治理邊坡與挖掘隧道。</p>
+										<p>對於大地與資源領域而言，臺灣非常值得發掘。小小一個島嶼擁有各式各樣的構造與岩性；石礦產業不論開採或加工，技術都相當進步；而年輕脆弱的地質條件加上高強度的降雨與地震，讓大地工程及防災的人才需求十分龐大。</p>
+									</div>
+									<div class="row gallery">
+										<div class="col-3 col-4-large col-6-medium col-12-xsmall"><span class="image fit"><img src="images/geme.jpg" alt="" /><span class="caption">隧道工程現場</span></span></div>
+									</div>
+									<ul class="actions">
+										<li><a href="join.html" class="button">加入我們</a></li>
+									</ul>
 								</section>
 
 						</div>
@@ -119,10 +222,10 @@
 										<li>
 											<span class="opener">研究方向</span>
 											<ul>
-												<li><a href="research.html#rockmechanics">岩石力學</a></li>
-												<li><a href="research.html#numericalanalysis">數值分析</a></li>
-												<li><a href="research.html#engineeringgeology">工程地質</a></li>
-												<li><a href="research.html#geotechnical">大地與資源工程</a></li>
+												<li><a href="research.html#rocktesting">岩石試驗</a></li>
+												<li><a href="research.html#pointcloud">點雲分析</a></li>
+												<li><a href="research.html#modeldev">模式開發</a></li>
+												<li><a href="research.html#simulation">數值模擬</a></li>
 											</ul>
 										</li>
 										<li><a href="publications.html">發表著作</a></li>
@@ -132,6 +235,8 @@
 												<li><a href="apparatus.html#labequipment">岩石試驗設備</a></li>
 												<li><a href="apparatus.html#fieldequipment">野外調查用小型儀器</a></li>
 												<li><a href="apparatus.html#measurement">測量用儀器</a></li>
+												<li><a href="apparatus.html#scanning">三維掃描儀器</a></li>
+												<li><a href="apparatus.html#software">分析軟體</a></li>
 											</ul>
 										</li>
 										<li><a href="members.html">成員</a></li>
