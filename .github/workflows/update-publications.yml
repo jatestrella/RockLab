@@ -34,8 +34,8 @@ jobs:
         env:
           # Keep this in step with OUTPUTS in scripts/fetch_orcid.py.
           TOUCHED: >-
-            publications-list.html publications.html pi.html
-            publications-list-en.html en/publications.html en/pi.html
+            publications-list.html publications.html
+            publications-list-en.html en/publications.html
         run: |
           if git diff --quiet -- $TOUCHED; then
             echo "Publications are already up to date; nothing to commit."

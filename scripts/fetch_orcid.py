@@ -59,18 +59,17 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 EXTRA_PATH = os.path.join(REPO_ROOT, "scripts", "extra_publications.json")
 
 # The list is rendered once per language: same works, translated headings and
-# link labels. Each fragment is written out on its own and injected into every
-# page of that language carrying the marker pair.
+# link labels. Each fragment is written out on its own and injected into the
+# publications page of that language. The PI page deliberately links here
+# rather than repeating all 66 entries.
 OUTPUTS = {
     "zh": {
         "fragment": os.path.join(REPO_ROOT, "publications-list.html"),
-        "pages": [os.path.join(REPO_ROOT, "publications.html"),
-                  os.path.join(REPO_ROOT, "pi.html")],
+        "pages": [os.path.join(REPO_ROOT, "publications.html")],
     },
     "en": {
         "fragment": os.path.join(REPO_ROOT, "publications-list-en.html"),
-        "pages": [os.path.join(REPO_ROOT, "en", "publications.html"),
-                  os.path.join(REPO_ROOT, "en", "pi.html")],
+        "pages": [os.path.join(REPO_ROOT, "en", "publications.html")],
     },
 }
 
