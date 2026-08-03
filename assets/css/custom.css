@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+
+/*
+	Chinese typography overrides for Editorial by HTML5 UP.
+	Loaded after main.css. Nothing here changes the template's layout —
+	it only supplies CJK fonts and corrects spacing that was tuned for Latin text.
+*/
+
+/* Font stacks.
+   Latin families come first so digits, units and English keep Open Sans /
+   Roboto Slab; Chinese falls through to Noto, then to the system fonts. */
+
+	body,
+	input, select, textarea,
+	.button {
+		font-family: "Open Sans", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+	}
+
+	h1, h2, h3, h4, h5, h6,
+	#header .logo,
+	#menu ul {
+		font-family: "Open Sans", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+		font-weight: 700;
+	}
+
+/* CJK spacing.
+   Chinese glyphs already sit on a fixed em box, so the template's
+   0.075em kerning pulls them apart; and a full glyph body needs more
+   leading than Latin text does. */
+
+	html[lang^="zh"] body {
+		line-height: 1.9;
+	}
+
+	html[lang^="zh"] h1,
+	html[lang^="zh"] h2,
+	html[lang^="zh"] h3,
+	html[lang^="zh"] h4,
+	html[lang^="zh"] h5,
+	html[lang^="zh"] h6,
+	html[lang^="zh"] #header .logo,
+	html[lang^="zh"] #menu ul {
+		letter-spacing: 0;
+	}
+
+	html[lang^="zh"] h1,
+	html[lang^="zh"] h2,
+	html[lang^="zh"] h3 {
+		line-height: 1.5;
+	}
+
+	html[lang^="zh"] p {
+		margin-bottom: 1.6em;
+	}
+
+/* uppercase does nothing to Chinese and only shouts at the language switcher. */
+
+	html[lang^="zh"] #menu ul {
+		text-transform: none;
+	}
+
+/* Menu links are no longer wrapped in <h3>, so restore a comfortable size. */
+
+	#menu ul a,
+	#menu ul span {
+		font-size: 1em;
+	}
+
+	#menu > ul > li > ul a,
+	#menu > ul > li > ul span {
+		font-size: 0.9em;
+	}
+
+/* Role label on the members page (was an <h4>). */
+
+	.role {
+		color: #9fa3a6;
+		font-size: 0.9em;
+		letter-spacing: 0;
+	}
