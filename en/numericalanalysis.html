@@ -4,12 +4,13 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Numerical analysis</title>
+		<title>Numerical Analysis</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/jpeg" href="../images/logo_small.jpg" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
 	</head>
 	<body class="is-preload">
 
@@ -22,74 +23,61 @@
 
 							<!-- Header -->
 								<header id="header">
-									<a href="numericalanalysis.html" class="logo">Research Topics / Numerical Analysis</a>
+									<a href="index.html" class="logo">Numerical Analysis</a>
 								</header>
 
 							<!-- Content -->
 								<section class="row">
-									<div class="col-12">
-										<header class="main">
-											<h2>Numerical Analysis</h2>
-										</header>
-										<span class="image right">
-											<img src="images/PIM with velocity-dependent law.gif" alt="" width="30%"/>
-										</span>
-										<p>Discrete element modelling is a powerful tool to investigate rock mechanics problems such as rock fall, landslide, crack propagation, and joint sliding behavior. </p>
+									<div class="col-8 col-12-small">
+										<h2>The Discrete Element Method</h2>
+										<p>The discrete element method (DEM) is a comparatively young tool of numerical analysis. It was first proposed by Cundall in 1971 to analyse the progressive failure of rock blocks. The method computes the motion of the elements through a force&ndash;displacement relationship and examines the interaction between particles and its consequences, so that the questions the researcher is interested in can be explored. Its range of application is extremely broad: depending on whether bonds between particles are introduced, the method is able to represent both continuous and discrete bodies. The problems it can treat fall roughly into the following classes:</p>
+										<p>
+										(1) The motion of granular materials<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example the transport and deposition of debris flows, landslides and rockfalls in geomaterials subjected to seismic loading.<br>
+										(2) Bearing capacity and fracture behaviour<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example the simulation of rock specimens under compression, the analysis of soil bearing capacity, the study of slope stability, and the stability analysis of tunnel rock masses.<br>
+										(3) The mechanical behaviour of highly frictional blocks<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example the simulation of direct shear tests, the analysis of the sliding potential and run-out of dip slopes, and the reproduction of the fault dislocation process.<br>
+										(4) Complex problems combining two or more of these characteristics<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For example the simulation of jointed rock masses, which are both highly frictional and prone to fracture, or the reproduction of a dip slope that disintegrates after sliding and develops into a debris flow.<br>
+										</p>
+									</div>
+									<div class="col-4 col-12-small"><span class="image fit"><img src="../images/PIM with velocity-dependent law.gif" alt="" /></span></div>
+
+									<hr class="major col-12" />
+
+									<div class="col-8 col-12-small">
+										<h2>The Particulate Interface Model</h2>
+										<p>An &ldquo;interface&rdquo; here means any contact surface between solids, and is not restricted to geological weak planes such as joints or cleavage. The contact between a rock bolt and the surrounding rock, between a pile and the soil, or between one mineral grain and another within a rock material may all be called an interface. In rock engineering the mechanical properties of the interfaces govern the stability of the rock mass, which makes the discrete element method &mdash; able as it is to represent interface mechanics &mdash; the better choice for analysis. The most advanced interface model currently available in the discrete element method, the smooth joint model, nevertheless does not account for the geometrical arrangement of the particles during shearing or for its relation to the input parameters, and therefore cannot provide accurate simulations of interface behaviour.</p>
+										<p>To resolve this problem our group has considered the contact and separation characteristics of a group of particles under shear, introduced a number of corrections into the calculation, and incorporated the two failure criteria most widely used in practice &mdash; the Mohr&ndash;Coulomb and the Barton&ndash;Bandis criteria. The result is an accurate interface model for the discrete element method, which we have named the Particulate Interface Model (PIM). PIM reproduces interface friction accurately within a discrete element analysis, and the input parameters it requires can be taken directly from laboratory test data without back-calculation or adjustment. This makes the discrete element method a more credible tool for predicting hazards in rock engineering: it can be applied to the stability analysis of dip slopes, used to build a discrete element framework for rock support systems, and employed to study the deformation modes of slate and schist. The range of extensions is wide, and it offers engineers and researchers a more complete set of analytical perspectives.</p>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="../images/model_pp.jpg" alt="" /></span>
 									</div>
 									<hr class="major col-12" />
-									
-									<div class="col-12">
-										<h2>Jointed rock masses modelling</h2>
-										<span class="image right">
-											<img src="images/jrm.jpg" alt="" width="30%"/><br>
-											<img src="images/JRMcrk_40.gif" alt="" width="30%"/>
-										</span>
-										<p>We usually assume that the mechanical behavior of jointed rock mass around our structure are isotropic, and then design underground projects based on the theories 
-										which assume material is isotropic. It is enough for intact rock mass or heavily fragmented rock mass, but it is no longer an isotropic material for jointed rock mass
-										with just two or more sets of joint. The difference between jointed rock mass and intact rock is anisotropy. Anisotropy makes significant difference on the strength and 
-										deformation of jointed rock mass when external force applies in different directions. The reason of anisotropy in jointed rock mass is that lots of discontinuities exist
-										which strength and deformation are unequal under different stress state. In order to understand this complex mechanical behavior, the most important thing is to find out
-										how intact rock material interacts with joints movement.</p>
-										<p></p>
+
+									<div class="col-8 col-12-small">
+										<h2>The Biconcave Bond Model</h2>
+										<p>The mechanical behaviour of rock material is one of the central topics of rock mechanics. Unlike soil, rock possesses a considerable cohesion, and the nature of the cementation between the grains is an important factor governing its mechanical behaviour. While examining thin sections of rock we observed that the cementation between grains approximates a biconcave shape. Starting from this observation we developed a bond model with a biconcave cement geometry, which we named the Biconcave Bond Model.</p>
+										<p>The biconcave bond model gives a physically reasonable description of the response of a biconcave cement under load, and from the material and geometrical parameters supplied it yields the stress distribution, the stiffness and other aspects of the bond response. When specimens of known geometry and fabric are simulated by back-analysis, the micro-scale material parameters used by the biconcave bond model lie closer to the values measured in laboratory tests. This indicates that the model performs better when macroscopic mechanical behaviour is to be predicted from micro-scale material parameters together with the fabric of the specimen.</p>
+									</div>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="../images/sheet.jpg" alt="" /></span>
+										<span class="image fit"><img src="../images/sheet_matrix.jpg" alt="" /></span>
 									</div>
 									<hr class="major col-12" />
-									
-									<div class="col-12">
-										<h2>Particulate interface model</h2>
-										<span class="image right">
-											<img src="images/model_pp.jpg" alt="" width="30%"/>
-										</span>
-										<p>The strength and deformability of rock mass are heavily influenced by the properties of joints, thus the simulation of interfaces is vital and valuable for 
-										engineering design. Interfaces can be simulated using various method in particulate DEMs, the advanced one is using a smooth-joint contact model to generate the
-										interface. However, the reference-less input parameters are an unsolved problem that makes the smooth-joint model unreliable and uneconomical in engineering design.<p>
-										<p>To solve this problem, we proposes a new interface model for particulate DEMs, namely the <b>particulate interface model (PIM)</b>. The PIM performs highly accurate,
-										stable, and reasonable simulation of specified interface behaviors between particles. The microscopic parameters of the PIM, such as friction angle and cohesion, are 
-										consistent with the macroscopic properties. The required parameters are determined through laboratory tests and field investigation; they can be directly entered 
-										into the DEM without time-consuming back-analysis. The PIM can faithfully reflect real-world interface behavior.</p>
+
+									<div class="col-8 col-12-small">
+										<h2>Simulation of Jointed Rock Masses</h2>
+										<p>
+										We tend to regard the rock surrounding a geotechnical work as a solid foundation, and to assume that its mechanical properties are homogeneous and isotropic when planning the design and analysis that follow. That view is appropriate for an intact block of rock, or for a rock mass so heavily fractured that it behaves as a continuum. Once a rock mass contains one or more sets of joints, however, its mechanical behaviour is no longer homogeneous and isotropic but anisotropic. Strength and deformability then differ with direction and the behaviour becomes highly complex. Jointed rock masses are consequently very difficult to deal with in engineering design, and they represent one of the principal challenges of rock mass engineering.
+										</p>
 									</div>
-									<hr class="major col-12" />
-									
-									<div class="col-12">
-										<h2>Biconcave bond model</h2>
-										<span class="image right">
-											<img src="images/sheet.jpg" alt="" width="30%"/><br>
-											<img src="images/sheet_matrix.jpg" alt="" width="30%"/>
-										</span>
-										<p>In recent years, numerous researchers have reproduced the mechanical behavior of rock by using the distinct element method (DEM), based 
-										on a bonded-particle model (BPM). Compared with a continuum analysis, the DEM has several unique characteristics and advantages, such as the 
-										ability to simulate crack propagation or extremely large deformation problems. The discrete characteristics of DEM cause it to be superior to 
-										other geotechnical calculation methods for discrete problems. However, these features also increase the complexity of this method, particularly 
-										when it is used to determine relationships between micro- and macromechanical behaviors, because they require the complexity of a real physical
-										system to be simplified. Simplification is necessary for the construction of a model; however, oversimplification reduces the physical accuracy
-										of the simulation. </p>
-										<p>To determine the comprehensive mechanical behavior of the bond layer, a complicated bond model for a DEM was developed in this study, which 
-										considered bond geometry and the reactions of the bond layer. The premise for the study originated from the cementation of rock. The model was 
-										simplified to consider only independent bonds between particles. The shapes of these bonds resemble biconcave lenses; 
-										therefore, the model was named the biconcave bond model. Compared with the parallel bond model, this biconcave bond model uses part of the 
-										Dvorkin simplified elastic theory to create DEM contacts, rather than employing the Timoshenko beam theory. The major difference between these
-										two bond models is bond shape; the parallel bond model uses a rectangular bond, whereas the biconcave bond model assumes the bond is
-										a biconcave layer, which is more similar to natural cementation. </p>
+									<div class="col-4 col-12-small">
+										<span class="image fit"><img src="../images/jrm.jpg" alt="" /></span>
+										<span class="image fit"><img src="../images/JRMcrk_40.gif" alt="" /></span>
 									</div>
+
 								</section>
 						</div>
 					</div>
@@ -102,49 +90,46 @@
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-										<a href="index.html"><img src="images/logo_tri.png" alt="" width="100%" valign="center" align="center"/></a>
+										<a href="index.html"><img src="../images/logo.jpg" alt="" width="100%" /></a>
 									</header>
 									<ul>
-										<li><a href="index.html">Rock Laboratory</a></li>
 										<li>
-											<span class="opener">Research Topics</span>
+											<span class="opener"><h3>Research Topics</h3></span>
 											<ul>
-												<li><a href="rockmechanics.html">Rock Mechanics</a></li>
-												<li><a href="numericalanalysis.html">Numerical Analysis</a></li>
-												<li><a href="engineeringgeology.html">Engineering Geology</a></li>
-												<li><a href="rockexperiments.html">Rock Experiments</a></li>
+												<li><a href="rockmechanics.html"><h3>Rock Mechanics</h3></a></li>
+												<li><a href="numericalanalysis.html"><h3>Numerical Analysis</h3></a></li>
+												<li><a href="engineeringgeology.html"><h3>Engineering Geology</h3></a></li>
+												<li><a href="geotechnicalresourceengineering.html"><h3>Geotechnical and Resources Engineering</h3></a></li>
 											</ul>
 										</li>
 										<li>
-											<span class="opener">Apparatus</span>
+											<span class="opener"><h3>Apparatus</h3></span>
 											<ul>
-												<li><a href="rtx1000.html">RTX-1000 TRIAXIAL ROCK TESTING SYSTEM</a></li>
-												<li><a href="pointload.html">Point-load test</a></li>
-												<li><a href="ultrasonic.html">Untrasonic pulse velocity Tester</a></li>
-												<li><a href="schmidthammer.html">Schmidt hammer</a></li>
+												<li><a href="apparatus.html#RTX1000"><h3>Triaxial Rock Testing System</h3></a></li>
+												<li><a href="apparatus.html#rockcutter"><h3>Rock Core Cutter</h3></a></li>
+												<li><a href="apparatus.html#pointload"><h3>Point Load Tester</h3></a></li>
+												<li><a href="apparatus.html#ultrasonic"><h3>Ultrasonic Pulse Velocity Tester</h3></a></li>
+												<li><a href="apparatus.html#fieldequipment"><h3>Instruments for Field Investigation</h3></a></li>
+												<li><a href="apparatus.html#measurement"><h3>Surveying Instruments</h3></a></li>
 											</ul>
 										</li>
-										<li><a href="pi.html">P.I.</a></li>
-										<li><a href="members.html">Members</a></li>
+										<li><a href="pi.html"><h3>Principal Investigator</h3></a></li>
+										<li><a href="members.html"><h3>Members</h3></a></li>
+										<li><a href="../index.html"><h3>中文</h3></a></li>
 									</ul>
 								</nav>
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Get in touch</h2>
+										<h4>Get in touch</h4>
 									</header>
 									<ul class="contact">
-										<li class="icon solid fa-envelope">ccchiu@ntut.edu.tw</li>
-										<li class="icon solid fa-phone">+886-2-27712171#2740</li>
-										<li class="icon solid fa-home">1, Sec. 3, Zhongxiao E. Rd.<br />
-										Taipei, Taiwan, R.O.C. 10608</li>
+										<li class="icon solid fa-envelope"><h4>ccchiu@ntut.edu.tw</h4></li>
+										<li class="icon solid fa-phone"><h4>+886-2-27712171#2740</h4></li>
+										<li class="icon solid fa-home"><h4>Room 304, Materials and Resources Building<br>No. 1, Sec. 3, Zhongxiao E. Rd.<br>Da'an Dist., Taipei 10608, Taiwan</h4></li>
 									</ul>
+									<h6 class="copyright">Copyright &copy; Jate Chia-Chi Chiu. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</h6>
 								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
 
 						</div>
 					</div>
@@ -152,11 +137,11 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
